@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-travel-log-table
+      author: Tohir
+      changes:
+        - createTable:
+            tableName: travel_log
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: DATETIME
+              - column:
+                  name: vehicle_registration_number
+                  type: VARCHAR(20)
+              - column:
+                  name: vehicle_owner_name
+                  type: VARCHAR(100)
+              - column:
+                  name: odometer_value_start
+                  type: INTEGER
+              - column:
+                  name: odometer_value_end
+                  type: INTEGER
+              - column:
+                  name: route
+                  type: VARCHAR(100)
+              - column:
+                  name: journey_description
+                  type: VARCHAR(255)
+              - column:
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  name: updated_at
+                  type: DATETIME
